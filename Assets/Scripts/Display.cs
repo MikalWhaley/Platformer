@@ -20,6 +20,13 @@ public class Display : MonoBehaviour
     {
         
     }
+    
+
+    public void updateCoin()
+    {
+        coinCount++;
+        coins.text = "COINS X " + coinCount.ToString();
+    }
 
     // Update is called once per frame
     void Update()
