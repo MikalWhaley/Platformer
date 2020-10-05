@@ -11,7 +11,7 @@ public class Display : MonoBehaviour
     public TextMeshProUGUI time;
     public TextMeshProUGUI coins;
 
-    private float timeLimit = 999;
+    private float timeLimit = 100;
     private int coinCount = 0;
     private int scoreCount = 0;
 
@@ -28,11 +28,22 @@ public class Display : MonoBehaviour
         coins.text = "COINS X " + coinCount.ToString();
     }
 
+    public void updateScore()
+    {
+        scoreCount += 100;
+        score.text = scoreCount.ToString();
+    }
+
     // Update is called once per frame
     void Update()
     {
         timeLimit -= (Time.deltaTime);
-        time.text = "TIME \n" + (timeLimit.ToString()).Substring(0, 3);
-        ;
+        time.text = "TIME \n" + (timeLimit.ToString()).Substring(0, 2);
+        
+
+        if(timeLimit < 1)
+        {
+            time.text = "GAME OVER";
+        }
     }
 }

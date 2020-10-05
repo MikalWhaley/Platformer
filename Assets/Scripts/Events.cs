@@ -6,17 +6,17 @@ public class Events : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    Display display;
+    //Display display;
     void Start()
     {
-        display = GameObject.Find("Display").GetComponent<Display>();
+        //display = GameObject.Find("Display").GetComponent<Display>();
 
     }
     void OnMouseDown()
     {
         // Destroy game object
 
-
+        /*
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
@@ -26,13 +26,9 @@ public class Events : MonoBehaviour
             // for example by tagging all trees with "Tree" and checking hit.transform.tag
             GameObject.Destroy(hit.transform.gameObject);
 
-            if(gameObject.name == "QuestionBlock(Clone)")
-            {
-                display.updateCoin();
 
-            }
         }
-
+        */
 
     }
 
